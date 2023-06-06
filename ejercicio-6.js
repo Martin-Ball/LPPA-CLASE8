@@ -52,3 +52,27 @@ return num1 + num2;
 
 var resultado = suma(5, 3.14);
 console.log(resultado);
+
+//Ejercicio 6-e
+
+function validateInteger(number) {
+    if (!Number.isInteger(number)) {
+      console.log("Error: El número no es entero");
+      return Math.round(number);
+    }
+    return number;
+  }
+  
+function suma(num1, num2) {
+    num1 = validateInteger(num1);
+    num2 = validateInteger(num2);
+    
+    if (isNaN(num1) || isNaN(num2)) {
+      return NaN;
+    }
+  
+    return num1 + num2;
+}
+
+var resultado = suma(5, 3.14);
+console.log(resultado);
